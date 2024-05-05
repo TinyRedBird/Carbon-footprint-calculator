@@ -1,0 +1,155 @@
+body {
+    background: linear-gradient(#1fc8db 25%, #359381 35%, #104746 50%);
+    height: 768px;
+    min-width: 100vh;
+    overflow-x: hidden;
+}
+
+.content input {
+    background-color: rgba(47, 32, 32, 0.2);
+    font-size: 20px;
+    padding-right: 10px;
+    color: #488139;
+}
+
+.w {
+    height: 30px;
+    width: 100px;
+}
+.ti{
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 30px;
+}
+.c {
+    -webkit-appearance: none;
+    /* 这是做兼容用的 只有谷歌浏览器作为参照 */
+    appearance: none;
+    /* 清除掉自带的样式 */
+    outline: none;
+    /* 部分浏览器清除自带的样式后外面会带有一圈边框 */
+    width: 21px;
+    /* 设置复选框的宽度 */
+    height: 18px;
+    /* 设置复选框的高度 */
+    border: 1px solid gray;
+    /* 给复选框加边框 */
+    text-align: center;
+    /* 实现复选框里面内容水平居中 */
+    line-height: 18px;
+    /* 实现复选框里面内容垂直居中 */
+    /* border-radius: 50%; */
+    /* 让框变成圆形 */
+}
+
+/*在复选框中加了一个心 并且让他变得透明 复选框和单选框是单标签中可以用:after和:beofre的 */
+.c::after {
+    content: '\2764';
+    color: transparent;
+}
+
+/* 操作选中之后添入的心的颜色 */
+.c:checked::after {
+    color: #488139;
+}
+
+.piture {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text {
+    position: absolute;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.piture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec {
+    position: relative;
+    padding: 10px;
+}
+
+.sec label {
+    font-size: 25px;
+    color: #fff;
+    padding-top: 20px;
+    font-weight: 400;
+}
+
+/* 选项卡1*/
+#tabBox {
+    width: 800px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 15px;
+}
+
+/* 菜单class*/
+.tab_box {
+    width: 600px;
+    margin: 30px auto;
+    float: left;
+}
+
+.lableBox {
+    padding-left: 30px;
+    font-size: 0;
+}
+
+#box {
+    color: #359381;
+    font-size: 26px;
+    position: absolute;
+    float: right;
+}
+
+.lableBox p {
+    font-size: 26px;
+}
+
+.lableBox li {
+    /* user-select: none; */
+    display: inline-block;
+    line-height: 30px;
+    height: 40px;
+    padding: 0 50px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: 1px solid #97a7b7;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+}
+
+.lableBox li.active {
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.contentBox {
+    padding: 50px 35px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(225, 225, 225, 0.2);
+    border-radius: 16px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    width: 1490px;
+    height: 80vh;
+    color: #fff;
+}
+
+.contentBox .content {
+    display: none;
+    height: 300px;
+}

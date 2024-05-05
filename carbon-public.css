@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/*@import url 对资源文件的导入 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+#logo {
+    font-size: 3em;
+    color: #131414;
+    pointer-events: none;
+    margin-right: 370px;
+    padding: 6px 15px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #359381;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background-color: #359381;
+    color: #fff;
+}
+
+.box {
+    position: fixed;
+    display: none;
+    justify-content: space-between;
+    width: 400px;
+    height: 400px;
+}
+
+/* Modal Content/Box */
+.box.box-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    justify-content: space-between;
+    margin: 0 0px;
+    width: 400px;
+    height: 400px;
+}
+
+/* Modal Content/Box */
+.modal.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    padding: 60px 20px;
+    box-shadow:
+        inset 20px 20px 20px rgba(0, 0, 0, 0.05),
+        25px 35px 20px rgba(0, 0, 0, 0.05),
+        25px 30px 30px rgba(0, 0, 0, 0.05),
+        inset -20px -20px 25px rgba(225, 225, 225, 0.9);
+}
+
+.modal.modal-content {
+    transition: .5s;
+    border-radius: 52% 48% 33% 67% / 38% 45% 55% 62%;
+}
+
+.modal.modal-content:hover {
+    border-radius: 50%;
+}
+
+.modal.modal-content::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 85px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.9;
+}
+
+.modal.modal-content::after {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 110px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.9;
+}
+
+.modal.modal-content div {
+    position: relative;
+    width: 225px;
+    border-radius: 25px;
+    box-shadow:
+        inset 2px 5px 10px rgba(0, 0, 0, 0.1),
+        inset -2px -5px 10px rgba(225, 225, 225, 1),
+        15px 15px 10px rgba(0, 0, 0, 0.05),
+        15px 10px 15px rgba(0, 0, 0, 0.025);
+}
+
+.modal.modal-content input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+.modal.modal-content input[type="submit"] {
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal.modal-content div:last-child {
+    width: 120px;
+    background:rgb(6, 109, 68,0.5);
+    transition: 0.5s;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1),
+        15px 15px 10px rgba(0, 0, 0, 0.5),
+        15px 10px 15px rgba(0, 0, 0, 0.025);
+}
+
+.modal.modal-content div:last-child:hover {
+    width: 150px;
+}
+
+.modal.modal-content div::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    height: 5px;
+    background: rgba(225, 225, 225, 0.5);
+    border-radius: 5px;
+}
+
+.btns {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 120px;
+    height: 120px;
+    background: #deeade;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btns {
+    border-radius: 44% 56% 65% 35% / 57% 58% 42% 43%;
+    box-shadow: inset 10px 10px 10px rgba(190, 1, 254, 0.05),
+        15px 25px 10px rgba(203, 250, 249, 0.1),
+        15px 20px 15px rgba(210, 240, 243, 0.1),
+        inset -10px -10px 15px rgba(212, 204, 234, 0.5);
+}
+
+.register {
+    bottom: 150px;
+    right: 0px;
+    width: 80px;
+    height: 80px;
+    background: #deecf1;
+    border-radius: 49% 51% 52% 48% / 63% 59% 41% 37%;
+    box-shadow: inset 10px 10px 10px rgba(1, 180, 255, 0.05),
+        15px 25px 10px rgba(1, 180, 255, 0.1),
+        15px 20px 20px rgba(1, 180, 255, 0.1),
+        inset -10px -10px 15px rgba(225, 225, 225, 0.5);
+}
+
+.btns::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ddb3b3;
+    opacity: 0.45;
+}
+
+.register::before {
+    left: 20px;
+    width: 15px;
+    height: 15px;
+}
+
+.btns {
+    transition: 0.25s;
+}
+
+.btns:hover {
+    border-radius: 50%;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(232, 195, 195);
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.modal.modal-content.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #359381;
+    margin-inline-end: auto;
+}
+#cankao{
+font-size: 15px;
+}
+footer p {
+    text-align: center;
+    font-size: 20px;
+    color: #024124c0;
+    font-weight: 500;
+}
+
+footer a {
+    color: #024124c0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

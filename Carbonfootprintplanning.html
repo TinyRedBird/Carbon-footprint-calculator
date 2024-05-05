@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="./carbon-public.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="Carbonfootprintplanning.css">
+</head>
+
+<body>
+    <header>
+        <span class="iconfont icon-tanzujishuliang" id="logo"></span>
+        <nav class="navigation">
+            <a href="Mycarbonfootprint.html">我的碳足迹</a>
+            <a href="Understandingcarbonfootprint.html">了解碳足迹</a>
+            <a href="Reducecarbonfootprint.html">减少碳足迹</a>
+            <a href="Carbonfootprintplanning.html" class="active">碳足迹计划</a>
+            <a href="#">登录|注册</a>
+        </nav>
+        <!-- nav 导航条 -->
+    </header>
+<div class="space">
+    <div id="MYUL">
+    <h1>待办事项列表</h1>
+    <input type="text" id="taskInput" placeholder="输入待办事项">
+    <button onclick="addTask()">添加</button>
+    </div>
+    <div class="list">
+    <ul id="taskList"></ul>
+    </div>
+</div>
+
+    <div class="cycle-outer">
+        <div class="cycle-wrapper">
+            <!--
+          描述：车架
+      -->
+            <div class="cycle-body">
+                <div class="seat">
+                    <span></span>
+                </div>
+                <div class="front-wheel-frame"></div>
+                <div class="top-frame"></div>
+                <div class="front-frame">
+                    <div class="bottle-holder">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="center-frame"></div>
+                <div class="back-frame"></div>
+                <div class="bottom-frame"></div>
+                <div class="handlebar-front"></div>
+                <div class="handlebar-curve"></div>
+            </div>
+            <!--
+          描述：后轮
+      -->
+            <div class="cycle-wheel cycle-wheel-back">
+                <div class="cycle-wheel-outer">
+                    <div class="cycle-wheel-inner">
+                        <div class="cycle-wheel-inner-padding">
+                            <ul class="spoke-container">
+                                <li class="spoke"></li>
+                                <li class="spoke"></li>
+                            </ul>
+                            <div class="inner-disc"></div>
+                            <div class="inner-disc-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+          描述：前轮
+      -->
+            <div class="cycle-wheel cycle-wheel-front">
+                <div class="cycle-wheel-outer">
+                    <div class="cycle-wheel-inner">
+                        <div class="cycle-wheel-inner-padding">
+                            <ul class="spoke-container">
+                                <li class="spoke"></li>
+                                <li class="spoke"></li>
+                            </ul>
+                            <div class="inner-disc"></div>
+                            <div class="inner-disc-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--
+          描述：中心轴  车链子 牙盘 水壶架  水壶   脚踏
+      -->
+            <div class="chain-up"></div>
+            <div class="chain-bottom"></div>
+            <div class="chain-rotation">
+                <div class="outer-axle"></div>
+                <div class="chain-disc-outer">
+                    <div class="chain-disc-inner"></div>
+                </div>
+            </div>
+            <div class="chain-rods">
+                <div class="pedal-rod"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>版权声明&nbsp;|&nbsp;<a data-email="3154983378@qq.com" href="mailto:3154983378@qq.com">联系我们</a>&nbsp;|&nbsp;关于我们
+            <br>
+            版权所有：317小组
+        </p>
+    </footer>
+    <script src="./carbon-public.js"></script>
+    <!--  -->
+    <script src="Carbonfootprintplanning.js"></script>
+</body>
+
+</html>

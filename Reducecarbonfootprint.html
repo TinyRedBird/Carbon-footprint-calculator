@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./carbon-public.css">
+    <link rel="stylesheet" href="./Reducecarbonfootprint.css">
+</head>
+
+<body>
+    <header>
+        <span class="iconfont icon-tanzujishuliang" id="logo"></span>
+        <nav class="navigation">
+            <a href="Mycarbonfootprint.html">我的碳足迹</a>
+            <a href="Understandingcarbonfootprint.html">了解碳足迹</a>
+            <a href="Reducecarbonfootprint.html" class="active">减少碳足迹</a>
+            <a href="Carbonfootprintplanning.html">碳足迹计划</a>
+            <a href="#">登录|注册</a>
+        </nav>
+    </header>
+    <div class="zhuti">
+        <div class="card" id="one">
+            <div class="img">
+                <img src="./Saihanba.jpg" alt="塞罕坝">
+                <a href="https://www.forestry.gov.cn/main/6051/20210412/092006842832207.html" target="_blank">
+                    <div class="mask" title="点击了解更多">
+                        <h1>塞罕坝林场</h1>
+                        <p>塞罕坝林场是中国河北省承德市围场满族蒙古族自治县的
+                            一个国家级森林工程项目，是世界上最大的人工林场之一。它始建于1962年，
+                            目前已经发展成为一个覆盖面积超过1万平方公里的森林生态系统。
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <h3>塞罕坝林场</h3>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="./mangrove.jpg" alt="红树林">
+                <a href="https://baike.baidu.com/item/%E7%BA%A2%E6%A0%91%E6%9E%97/13210" target="_blank">
+                    <div class="mask" title="点击了解更多">
+                        <h1>红树林</h1>
+                        <p>红树林（Mangrove）是生长在热带、亚热带海岸潮间带，由红树植物为主体的常绿乔木或灌木组成的湿地木本植物群落，
+                            在净化海水、防风消浪、固碳储碳、维护生物多样性等方面发挥着重要作用，
+                            有“海岸卫士”“海洋绿肺”美誉，也是珍稀濒危水禽重要栖息地，鱼、虾、蟹、贝类生长繁殖场所。
+                            中国红树植物分布在广东、广西、海南、福建、浙江等省区。
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <h3>红树林</h3>
+        </div>
+        <div class="card">
+            <div class="img">
+                <img src="./AntForest.jpg" alt="蚂蚁森林">
+                <a href="https://baike.baidu.com/item/%E8%9A%82%E8%9A%81%E6%A3%AE%E6%9E%97/20391720" target="_blank">
+                    <div class="mask" title="点击了解更多">
+                        <h1>蚂蚁森林</h1>
+                        <p>蚂蚁森林是一项旨在带动公众低碳减排的公益项目，每个人的低碳行为在蚂蚁森林里可计为"绿色能量"。
+                            "绿色能量"积累到一定程度，就可以用手机申请在生态亟需修复的地区种下一棵真树，或者在生物多样性亟
+                            需保护的地区“认领”保护权益。为了激励社会公众的低碳生活，5年来蚂蚁森林参与到全国11个省份的生态修复工作，
+                            累计种下3.26亿棵树，其中在甘肃、内蒙古均超过1亿棵。
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <h3>蚂蚁森林</h3>
+        </div>
+        <div class="card" id="four">
+            <div class="img">
+                <img src="./windpowergeneration.jpg" alt="蚂蚁森林">
+                <a href="https://baike.baidu.com/item/%E7%94%98%E8%82%83%E9%85%92%E6%B3%89%E9%A3%8E%E7%94%B5%E5%9F%BA%E5%9C%B0/10570054"
+                    target="_blank">
+                    <div class="mask" title="点击了解更多">
+                        <h1>甘肃风力发电</h1>
+                        <p>蚂蚁森林是一项旨在带动公众低碳减排的公益项目，每个人的低碳行为在蚂蚁森林里可计为"绿色能量"。
+                            "绿色能量"积累到一定程度，就可以用手机申请在生态亟需修复的地区种下一棵真树，或者在生物多样性亟
+                            需保护的地区“认领”保护权益。为了激励社会公众的低碳生活，5年来蚂蚁森林参与到全国11个省份的生态修复工作，
+                            累计种下3.26亿棵树，其中在甘肃、内蒙古均超过1亿棵。
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <h3>甘肃风力发电</h3>
+        </div>
+    </div>
+
+    <h1>碳足迹数据分析</h1>
+    <canvas id="barChart" height="600" width="900" style="margin:50px 0px 0px 300px"> 你的浏览器不支持HTML5 canvas </canvas>
+    <div id="advice">
+        <p id="GasData"></p>
+        <p id="paperA4Data"></p>
+        <p id="porkData"></p>
+        <p id="RiceFoodData"></p>
+        <p id="wineData"></p>
+        <p id="milkData"></p>
+        <p id="DressData"></p>
+        <p id="ElectronicData"></p>
+        <p id="solarWaterHeaterData"></p>
+        <p id="recycleOldData"></p>
+        <p id="efficientLightsData"></p>
+        <p id="FlyData"></p>
+        <p id="trainsData"></p>
+        <p id="BusesData"></p>
+        <p id="CarsData"></p>
+        <p id="BicycleData"></p>
+        <p id="areaData"></p>
+        <p id="ElectricData"></p>
+        <p id="GasData"></p>
+        <p id="H2oData"></p>
+    </div>
+    <footer>
+        <p>版权声明&nbsp;|&nbsp;<a data-email="3154983378@qq.com" href="mailto:3154983378@qq.com">联系我们</a>&nbsp;|&nbsp;关于我们
+            <br>
+            版权所有：317小组
+        </p>
+    </footer>
+    <script src="./carbon-public.js"></script>
+    <script type="text/javascript" src="./biaoge.js"></script>
+</body>
+
+</html>

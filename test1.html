@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>待办事项列表应用</title>
+  <style>
+    .completed {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <h1>待办事项列表</h1>
+  <input type="text" id="taskInput" placeholder="输入待办事项">
+  <button onclick="addTask()">添加</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    // 从本地存储中加载待办事项
+    window.addEventListener('DOMContentLoaded', loadTasks);
+
+    // 添加待办事项
+    function addTask() {
+      var input = document.getElementById('taskInput');
+      var task = input.value.trim();
+
+      if (task !== '') {
+        var taskList = document.getElementById('taskList');
+        var li = document.createElement('li');
+        li.innerHTML = task;
+        li.onclick = toggleTask;
+
+        // 添加删除按钮
+        var deleteButton = document.createElement('button');
+        deleteButton.innerHTML = '删除';
+        deleteButton.onclick = deleteTask;
+        li.appendChild(deleteButton);
+
+        taskList.appendChild(li);
+        input.value = '';
+
+        saveTasks();
+      }
+    }
+
+    // 切换待办事项的完成状态
+    function toggleTask() {
+      this.classList.toggle('completed');
+      saveTasks();
+    }
+
+    // 删除待办事项
+    function deleteTask() {
+      this.parentNode.parentNode.removeChild(this.parentNode);
+      saveTasks();
+    }
+
+    // 保存待办事项到本地存储
+    function saveTasks() {
+      var tasks = [];
+      var taskList = document.getElementById
+    }

@@ -1,0 +1,99 @@
+<!DOCTYpE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="./font/font_cpc3mr7h5b/iconfont.css">
+    <link rel="stylesheet" href="./carbon-public.css">
+    <link rel="stylesheet" href="./Mycarbonfootprint.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+</head>
+<body>
+    <header>
+        <span class="iconfont icon-tanzujishuliang" id="logo"></span>
+        <nav class="navigation">
+            <a href="Mycarbonfootprint.html" class="active">我的碳足迹</a>
+            <a href="Understandingcarbonfootprint.html">了解碳足迹</a>
+            <a href="Reducecarbonfootprint.html">减少碳足迹</a>
+            <a href="Carbonfootprintplanning.html">碳足迹计划</a>
+            <a href="#">登录|注册</a>
+            </div>
+        </nav>
+        <!-- nav 导航条 -->
+    </header>
+    <!-- 背景音乐-->
+    <audio id="audio" autoplay>
+        <source src="Windyhill.MP3">
+    </audio>
+    <section class="piture">
+        <!-- alt 图片加载不出来 显示的信息 -->
+        <img src="./hill1.png" alt="图片加载不出来" id="hill1">
+        <img src="./hill2.png" alt="图片加载不出来" id="hill2">
+        <img src="./hill3.png" alt="图片加载不出来" id="hill3">
+        <img src="./forest1.png" alt="图片加载不出来" id="forest1">
+        <img src="./hill4.png" alt="图片加载不出来" id="hill4">
+        <img src="./hill5.png" alt="图片加载不出来" id="hill5">
+        <img src="./forest.png" alt="图片加载不出来" id="forest">
+        <h2 id="text">Carbon Footprint Calculator</h2>
+    </section>
+    <section class="sec">
+        <div class="iconfont icon-tuya-" id="box"></div>
+        <!--计算部分-->
+        <div class="all">
+            <div id="tabBox" class="tab_box">
+                <ul class="lableBox">
+                    <li>用</li>
+                    <li>行</li>
+                    <li>住</li>
+                    <li>食</li>
+                </ul>
+                <div class="contentBox">
+                    <div class="content">
+                        <label for="paperA4">打印纸张(paper): (张) </label><input class="w" id=paperA4 value=0><br>
+                        <label for="Dress">新买衣服(Clothes): (件) </label><input class="w" id=Dress value=0><br>
+                        <input type="checkbox" class="c" id="solarWaterHeater" name="solarWaterHeater" value=1><label for="solarWaterHeater">太阳能热水器 </label><br>
+                        <input type="checkbox" class="c" id="recycleOld" name="recycleOld" value=1><label for="recycleOld">我循环使用至少30%的家庭废旧物品 </label><br>
+                        <input type="checkbox" class="c" id="efficientLights" name="efficientLights" value=1><label for="efficientLights">节能灯泡(在亮度相等的情况下,节能灯泡比普通钨丝灯泡节省20%的能源) </label><br>
+                    </div>
+                    <div class="content">
+                        <label for="Fly">飞机(Aircraft): (千米) </label><input class="w" id=Fly value=0><br>
+                        <label for="trains">火车(train): (千米) </label><input class="w" id=trains value=0
+                            name=text10><br>
+                        <label for="Buses">公交(Bus): (千米) </label><input class="w" id=Buses value=0 name=text3><br>
+                        <label for="Cars">私家车/出租/公家车(taxi): (千米) </label><input class="w" id=Cars value=0
+                            name=text5><br>
+                        <label for="Bicycle">自行车代步(Bike): (千米) </label><input class="w" id=Bicycle value=0><br>
+                    </div>
+                    <div class="content">
+                        <label for="area">居住面积(Living area): (平方米) </label><input class="w" id=area value=0><br>
+                        <label for="Electric">每月用电度数(Electricity): (度) </label><input class="w" id=Electric
+                            value=0><br>
+                        <label for="Gas">用天然气(natural Gas): (立方米) </label><input class="w" id=Gas value=0><br>
+                        <label for="H2o">用水(Water): (吨/月) </label><input class="w" id=H2o value=0><br>
+                    </div>
+                    <div class="content">
+                        <label for="RiceFood">主食(Rice): (碗) </label><input class="w" id=RiceFood value=0><br>
+                        <label for="pork">肉食(Meat): (盘) </label><input class="w" id=pork value=0><br>
+                        <label for="wine">饮用的葡萄酒(wine): (升) </label><input class="w" id=wine value=0><br>
+                        <label for="milk">饮用的牛奶(milk): (升) </label><input class="w" id=milk value=0><br>
+                        <button onclick="saveData()" class="ti"> 计 算 </button>
+                        <p id="result"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>版权声明&nbsp;|&nbsp;<a data-email="3154983378@qq.com" href="mailto:3154983378@qq.com">联系我们</a>&nbsp;|&nbsp;关于我们
+            <br>
+            版权所有：317小组
+            <br>
+            <a href="https://lca.cityghg.com/" id="cankao">数据参考|中国产品全生命周期温室气体排放系数库 CPCD , China Products Carbon
+                Footprint Factors Database</a>
+        </p>
+    </footer>
+    <script src="./carbon-script.js"></script>
+</body>
+
+</html>

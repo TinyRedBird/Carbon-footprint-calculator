@@ -1,0 +1,96 @@
+body {
+    background: #cfe3e8e8;
+}
+
+canvas {
+    border: 1px solid #A4E2F9;
+}
+
+#one {
+    margin-inline: 345px;
+}
+
+#advice {
+    width: 800px;
+    margin: 0px auto;
+}
+
+.zhuti {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.zhuti .card {
+    width: 30%;
+    height: 48%;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    margin-inline: 40px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.zhuti .card .img {
+    /* 相对定位 */
+    position: relative;
+    width: 100%;
+    height: 88%;
+    overflow: hidden;
+}
+
+.zhuti .card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.zhuti .card .img:hover {
+    cursor: pointer;
+}
+
+.zhuti .card .img:hover .mask {
+    top: 0;
+}
+
+.zhuti .card .img .mask {
+    /* 绝对定位 */
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: #464646e8;
+    color: #fff;
+
+    /* 添加过渡 */
+    transition: all .7s ease-out;
+}
+
+.mask h1 {
+    line-height: 50px;
+}
+
+.mask p {
+    margin: 20px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.zhuti .card h3 {
+    width: 100%;
+    line-height: 45px;
+    text-align: center;
+}
